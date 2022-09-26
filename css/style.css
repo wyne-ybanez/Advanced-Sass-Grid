@@ -18,11 +18,11 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-star] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
 
 .sidebar {
   background-color: #c69963;
-  grid-column: sidebar-start /sidebar-end;
+  grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; }
 
 .header {
@@ -33,7 +33,7 @@ body {
 
 .features {
   background-color: #aaa;
-  grid-column: center-start; }
+  grid-column: center-start / center-end; }
 
 .story__pictures {
   background-color: #c69963; }
