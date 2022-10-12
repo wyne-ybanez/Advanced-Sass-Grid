@@ -23,6 +23,13 @@ body {
     padding: 40px;
     font-size: 3rem; }
 
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
@@ -41,8 +48,21 @@ body {
   margin: 15rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  /*
+    - grid-template-rows: auto auto;
+
+    Having this commented out or not defined
+    makes this an implicit grid, no cells are manually placed
+    */
   grid-gap: 6rem; }
+
+.feature__icon {
+  fill: #c69963;
+  width: 4.5rem;
+  height: 4.5rem; }
+
+.feature__text {
+  font-size: 1.7rem; }
 
 .story__pictures {
   background-color: #c69963;

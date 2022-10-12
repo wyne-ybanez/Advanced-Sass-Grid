@@ -5,6 +5,23 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto; // makes this an implicit grid, no cells are manually placed
+    /*
+    - grid-template-rows: auto auto;
+
+    Having this commented out or not defined
+    makes this an implicit grid, no cells are manually placed
+    */
     grid-gap: 6rem;
+}
+
+.feature {
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
