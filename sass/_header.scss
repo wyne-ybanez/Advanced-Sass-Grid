@@ -1,7 +1,11 @@
 .header {
   background-color: $color-grey-dark-1;
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/hero.jpeg);
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.93),
+      rgba($color-secondary, 0.93)
+    ),
+    url(../img/hero.jpeg);
   background-size: cover;
   background-position: center;
   padding: 8rem;
@@ -27,14 +31,35 @@
     justify-self: start;
   }
 
+  // Even text can be part of a grid, not just other elements
   &__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-gap: 1.5rem;
+    align-items: center;
 
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+
+    // Acts like a divider
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      display: block;
+      background-color: currentColor; // uses the parent color
+    }
   }
 
   &__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    justify-items: center;
 
     img {
       height: 2.5rem;
+      filter: brightness(70%); // 100% is default
     }
   }
 }
